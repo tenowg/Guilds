@@ -32,7 +32,7 @@ public class Guilds extends CommonPlugin {
     @Override
     public void onEnable() {
         //Commands
-        final CommandRegistrationsFactory<Class<?>> commandRegFactory = new AnnotatedCommandRegistrationFactory(new SimpleInjector(this), new SimpleAnnotatedCommandExecutorFactory());
+        final CommandRegistrationsFactory<Class<?>> commandRegFactory = new AnnotatedCommandRegistrationFactory(getEngine(), new SimpleAnnotatedCommandExecutorFactory());
         final RootCommand root = engine.getRootCommand();
         //root.addSubCommands(this, PlayerCommands.class, commandRegFactory);
         //root.addSubCommands(this, AdminCommands.class, commandRegFactory);
